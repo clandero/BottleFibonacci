@@ -1,4 +1,5 @@
 from bottle import route, run, template
+import socket
 
 def fibonacci(n):
     n_menos_2 = 0
@@ -30,7 +31,6 @@ def sequence(n):
     }
     return template('template.tpl', res)
     
-import socket
 def get_ip():
     s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     try:
